@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
 #    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/DF62C037FCF71B15CA6464D4529042087A93BDFB"
-    - "aria2c --check-certificate=false --header 'Host: de13.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/142492452' --header 'Upgrade-Insecure-Requests: 1' 'https://de13.seedr.cc/ff_get/740938483/The.Witch.Part.1.-.The.Subversion.2018.720p.BluRay.x264-[YTS.AM].mp4?st=dqta9FsA_L4Uhd9r0eGBYg&e=1599674015' --out 'The.Witch.Part.1.-.The.Subversion.2018.720p.BluRay.x264-[YTS.AM].mp4'"
-    - ffmpeg -i "The.Witch.Part.1.-.The.Subversion.2018.720p.BluRay.x264-[YTS.AM].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="The Witch Part 1 - The Subversion 2018" -preset veryfast The.Witch.Part.1.-.The.Subversion.2018.720p.BluRay.x265.mp4
+    - "aria2c --check-certificate=false --header 'Host: de1.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/143121081' --header 'Upgrade-Insecure-Requests: 1' 'https://de1.seedr.cc/ff_get/744935440/Memoir.Of.A.Murderer.2017.720p.BluRay.x264-[YTS.AM].mp4?st=QSjcadX_XkLWd3nBxTJcVA&e=1600196074' --out 'Memoir.Of.A.Murderer.2017.720p.BluRay.x264-[YTS.AM].mp4'"
+    - ffmpeg -i "Memoir.Of.A.Murderer.2017.720p.BluRay.x264-[YTS.AM].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Memoir Of A Murderer 2017" -preset veryfast Memoir.Of.A.Murderer.2017.720p.BluRay.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "The.Witch.Part.1.-.The.Subversion.2018.720p.BluRay.x265.mp4"
+    path: "Memoir.Of.A.Murderer.2017.720p.BluRay.x265.mp4"
