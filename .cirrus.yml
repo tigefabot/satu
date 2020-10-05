@@ -12,8 +12,8 @@ ffmpeg_task:
     - apt-get install -yqq wget aria2 ffmpeg telnet tree
   test_script:
 #    - aria2c --bt-seed-unverified=true --seed-time=1 --seed-ratio=1.0 "https://yts.mx/torrent/download/6F8EEF779145DA6ECC61AFF51FFA44A23B803CEC"
-    - "aria2c --check-certificate=false --header 'Host: fr4.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/144398756' --header 'Upgrade-Insecure-Requests: 1' 'https://fr4.seedr.cc/ff_get/753177745/Midnight.FM.2010.720p.BluRay.x264.AAC-[YTS.MX].mp4?st=2e7NQ56W5hxHL00GrZv_UA&e=1601236430' --out 'Midnight.FM.2010.720p.BluRay.x264.AAC-[YTS.MX].mp4'"
-    - ffmpeg -i "Midnight.FM.2010.720p.BluRay.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="Midnight FM 2010" -preset veryfast Midnight.FM.2010.720p.BluRay.x265.mp4
+    - "aria2c --check-certificate=false --header 'Host: nl36.seedr.cc' --user-agent 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:81.0) Gecko/20100101 Firefox/81.0' --header 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8' --header 'Accept-Language: id,en-US;q=0.7,en;q=0.3' --referer 'https://www.seedr.cc/files/145391245' --header 'Upgrade-Insecure-Requests: 1' 'https://nl36.seedr.cc/ff_get/759422555/My.Bossy.Girl.2019.720p.WEBRip.x264.AAC-[YTS.MX].mp4?st=TspJRI4AU8GwJjUcRiKI3g&e=1602020600' --out 'My.Bossy.Girl.2019.720p.WEBRip.x264.AAC-[YTS.MX].mp4'"
+    - ffmpeg -i "My.Bossy.Girl.2019.720p.WEBRip.x264.AAC-[YTS.MX].mp4" -threads 16 -c:v libx265 -c:a aac -metadata title="My Bossy Girl 2019" -preset veryfast My.Bossy.Girl.2019.720p.WEBRip.x265.mp4
     - ls -hal
   binaries_artifacts:
-    path: "Midnight.FM.2010.720p.BluRay.x265.mp4"
+    path: "My.Bossy.Girl.2019.720p.WEBRip.x265.mp4"
