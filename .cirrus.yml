@@ -2,4 +2,4 @@ macos_instance:
   image: big-sur-base
 
 task:
-  script: 'curl -X POST --data-urlencode "payload={\"channel\": \"#general\", \"username\": \"webhookbot\", \"text\": \"$CIRRUS_CHANGE_MESSAGE\", \"icon_emoji\": \":rocket:\"}" https://hooks.slack.com/services/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'
+  script: ffmpeg -version
