@@ -2,4 +2,6 @@ macos_instance:
   image: big-sur-base
 
 task:
-  script: ffmpeg -version
+  script:
+    - brew install ffmpeg
+    - ffmpeg -version
