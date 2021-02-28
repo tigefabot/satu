@@ -1,5 +1,5 @@
 macos_instance:
-  image: big-sur-base
+  image: big-sur-xcode-12.4
 
 task:
   timeout_in: 120m
