@@ -4,6 +4,8 @@ macos_instance:
 task:
   timeout_in: 120m
   script:
+    - brew update --force
+    - brew list --formula
     - brew install ffmpeg aria2
   downloading_script:
     - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/xre2nuftlywyyrb/River.Where.the.Moon.Rises.E09-E10.210301.720p-NEXT.mp4"
