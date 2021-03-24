@@ -8,9 +8,9 @@ task:
 #    - brew list --formula
     - brew install ffmpeg aria2
   downloading_script:
-    - "aria2c --check-certificate=false --file-allocation=none --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/ygfcy8bp9nb890d/Joseon.Exorcist.S01E02.1080p.WEB-DL.H264.AAC-AppleTor.mp4"
+    - "aria2c --check-certificate=false --file-allocation=none --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://www.dropbox.com/s/dl/dho57ot0ade9nwy/Sisyphus.The.Myth.S01E11.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv"
   rendering_script:
-    - ffmpeg -i "Joseon.Exorcist.S01E02.1080p.WEB-DL.H264.AAC-AppleTor.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="Joseon Exorcist Episode 2" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 02.mkv
+    - ffmpeg -i "Sisyphus.The.Myth.S01E11.1080p.NF.WEB-DL.DDP2.0.x264-Imagine.mkv" -threads 16 -c:v libx265 -c:a copy -metadata title="Sisyphus The Myth Episode 11" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 11.mkv
     - ls -hal
   binaries_artifacts:
-    path: "02.mkv"
+    path: "11.mkv"
