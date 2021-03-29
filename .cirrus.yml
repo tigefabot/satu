@@ -8,10 +8,10 @@ task:
 #    - brew list --formula
     - brew install ffmpeg aria2
   downloading_script:
-    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://tigefa.my.id/The.Penthouse.S02E12.1080p.WEB-DL.H264.AAC-AppleTor.mp4"
+    - "aria2c --check-certificate=false --min-split-size=100M --max-concurrent-downloads=16 --max-connection-per-server=16 https://tigefa.my.id/River.Where.the.Moon.Rises.E25-E26.210329.720p-NEXT.mp4"
   rendering_script:
-    - ffmpeg -i "The.Penthouse.S02E12.1080p.WEB-DL.H264.AAC-AppleTor.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="The Penthouse Season 2 Episode 12" -preset veryfast -pix_fmt yuv420p10le -s 1280x720 The.Penthouse.S02E12.720p.WEB-DL.H265.AAC-AppleTor.mkv
+    - ffmpeg -i "River.Where.the.Moon.Rises.E25-E26.210329.720p-NEXT.mp4" -threads 16 -c:v libx265 -c:a copy -metadata title="River Where The Moon Rises Episode 13" -preset veryfast -pix_fmt yuv420p10le 13.mkv
     - ls -hal
   binaries_artifacts:
-    path: "The.Penthouse.S02E12.720p.WEB-DL.H265.AAC-AppleTor.mkv"
+    path: "13.mkv"
 
